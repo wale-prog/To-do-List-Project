@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 0 15px;
+  padding-top: 12px;
+  margin-top: 25vh;
+  background-color: #fff;
+}
+
+.main-container div {
+  border-bottom: solid #d3d3d3 2px;
+
+  /* border-top: solid #d3d3d3 1px; */
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading h2 {
+  opacity: 0.75;
+  font-size: 20px;
+
+  /* margin-top: 24px; */
+  margin-left: 12px;
+  margin-bottom: 12px;
+}
+
+.heading i {
+  margin-right: 12px;
+  opacity: 0.7;
+}
+
+.line {
+  color: #d3d3d3;
+  opacity: 0.75;
+}
+
+#input {
+  border: none;
+  margin-left: 12px;
+  font-style: italic;
+  padding: 12px;
+  width: 80%;
+}
+
+#input:focus {
+  outline: none;
+}
+
+.text-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-input i {
+  margin-right: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.task-ui {
+  display: flex;
+  padding-left: 12px;
+  align-items: center;
+}
+
+.icon {
+  margin-left: auto;
+  margin-right: 12px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.return {
+  padding: 6px;
+  cursor: pointer;
+}
+
+.reset {
+  padding: 4px;
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: #fbfecd;
+}
+
+.para {
+  margin-left: 12px;
+  padding: 12px;
+}
+
+.para:focus {
+  outline: none;
+}
+
+.footer {
+  background-color: #f6f6f6;
+
+  /* padding: 12px; */
+}
+
+footer button {
+  border: none;
+  padding: 24px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
