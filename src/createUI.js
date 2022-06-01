@@ -1,4 +1,4 @@
-import tasks from './tasks.js';
+import { tasks } from './tasks.js';
 
 export function createUI(text) {
   const taskSection = document.querySelector('.tasks-section');

@@ -1,4 +1,4 @@
-import tasks from './tasks.js';
+import { tasks } from './tasks.js';
 
 export default function editTask() {
   const para = document.querySelectorAll('.para');

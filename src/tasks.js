@@ -1,3 +1,5 @@
-const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+/* eslint-disable prefer-const */
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/no-mutable-exports */
 
-export default tasks;
+export let tasks = JSON.parse(localStorage.getItem('tasks')) || [];

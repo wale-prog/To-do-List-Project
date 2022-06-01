@@ -1,4 +1,4 @@
-import tasks from './tasks.js';
+import { tasks } from './tasks.js';
 
 export default function deleteTask() {
   const taskDiv = document.querySelectorAll('.task-ui');
@@ -19,6 +19,7 @@ export default function deleteTask() {
       const taskRemove = event.target.parentElement;
       const taskRemoveContent = taskRemove.firstChild.nextSibling.textContent;
       taskSection.removeChild(taskRemove);
+
       tasks = tasks.filter((task) => task.description !== taskRemoveContent);
       for (let i = 0; i < tasks.length; i += 1) {
         tasks[i].index = i + 1;

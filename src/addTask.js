@@ -1,5 +1,5 @@
 import Add from './add.js';
-import tasks from './tasks.js';
+import { tasks } from './tasks.js';
 import deleteTask from './deleteUI.js';
 import editTask from './editTask.js';
 import { singleTaskDefault } from './createUI.js';
