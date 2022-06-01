@@ -1,8 +1,8 @@
 import Add from './add.js';
-import {tasks} from './tasks.js';
-import { singleTask } from './createUI.js';
+import tasks from './tasks.js';
 import deleteTask from './deleteUI.js';
 import editTask from './editTask.js';
+import { singleTaskDefault } from './createUI.js';
 
 function addTaskDetails() {
   const textInput = document.getElementById('input');
@@ -10,7 +10,8 @@ function addTaskDetails() {
   if (taskDescription !== '') {
     const task = new Add(taskDescription, false, tasks.length + 1);
     tasks.push(task);
-    singleTask(task); 
+    singleTaskDefault();
+    deleteTask();
     editTask();
     textInput.value = '';
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -19,8 +20,9 @@ function addTaskDetails() {
 
 function validateKeydown(event) {
   if (event.key === 'Enter') {
+    const taskSection = document.querySelector('.tasks-section');
+    taskSection.innerHTML = '';
     addTaskDetails();
-    deleteTask();
   }
 }
 

@@ -1,4 +1,4 @@
-import {tasks} from './tasks.js';
+import tasks from './tasks.js';
 
 export default function deleteTask() {
   const taskDiv = document.querySelectorAll('.task-ui');

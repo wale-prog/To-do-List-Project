@@ -1,5 +1,4 @@
-import {tasks} from './tasks.js';
-import deleteTask from './deleteUI.js';
+import tasks from './tasks.js';
 
 export function createUI(text) {
   const taskSection = document.querySelector('.tasks-section');
@@ -26,15 +25,6 @@ export function createUI(text) {
   taskUI.append(input, textPara, ellipse, trash);
   taskSection.appendChild(taskUI);
   return taskSection;
-}
-
-export function singleTask() {
-  deleteTask();
-  tasks.forEach((task) => {
-    if (task.index >= tasks.length) {
-      createUI(task);
-    }
-  });
 }
 
 export function singleTaskDefault() {
