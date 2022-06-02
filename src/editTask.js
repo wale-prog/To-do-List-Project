@@ -12,6 +12,9 @@ export default function editTask() {
         tasks[focusedArray[0].index - 1].description = nextTask;
         previousTask = nextTask;
         localStorage.setItem('tasks', JSON.stringify(tasks));
+        item.parentElement.classList.remove('highlight');
+        item.nextElementSibling.classList.remove('hidden');
+        item.nextElementSibling.nextElementSibling.classList.add('hidden');
       }
     });
   });

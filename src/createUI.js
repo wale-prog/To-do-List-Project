@@ -1,6 +1,7 @@
 import { tasks } from './tasks.js';
+import interactive from './interactive.js';
 
-export function createUI(text) {
+const createUI = (text) => {
   const taskSection = document.querySelector('.tasks-section');
   const taskUI = document.createElement('div');
   taskUI.classList.add('task-ui');
@@ -25,10 +26,12 @@ export function createUI(text) {
   taskUI.append(input, textPara, ellipse, trash);
   taskSection.appendChild(taskUI);
   return taskSection;
-}
+};
 
-export function singleTaskDefault() {
+const singleTaskDefault = () => {
   tasks.forEach((task) => {
     createUI(task);
+    interactive();
   });
-}
+};
+export default singleTaskDefault;
