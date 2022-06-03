@@ -69,4 +69,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE.md) licensed.
+This project is [MIT](./LICENSE) licensed.
