@@ -14,13 +14,11 @@ export default function deleteTask() {
     });
   }
 
-  trash.forEach((item) => {
+  trash.forEach((item, index) => {
     item.addEventListener('click', (event) => {
       const taskRemove = event.target.parentElement;
-      const taskRemoveContent = taskRemove.firstChild.nextSibling.textContent;
       taskSection.removeChild(taskRemove);
-
-      tasks = tasks.filter((task) => task.description !== taskRemoveContent);
+      tasks = tasks.filter((task) => task.index !== index + 1);
       for (let i = 0; i < tasks.length; i += 1) {
         tasks[i].index = i + 1;
       }

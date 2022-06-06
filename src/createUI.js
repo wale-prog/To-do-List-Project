@@ -4,6 +4,7 @@ import interactive from './interactive.js';
 const createUI = (text) => {
   const taskSection = document.querySelector('.tasks-section');
   const taskUI = document.createElement('div');
+  taskUI.setAttribute('draggable', 'true');
   taskUI.classList.add('task-ui');
 
   const input = document.createElement('input');
