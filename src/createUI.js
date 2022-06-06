@@ -1,7 +1,7 @@
 import { tasks } from './tasks.js';
 import interactive from './interactive.js';
 
-const createUI = (text) => {
+const createUI = ({ description }) => {
   const taskSection = document.querySelector('.tasks-section');
   const taskUI = document.createElement('div');
   taskUI.setAttribute('draggable', 'true');
@@ -14,7 +14,7 @@ const createUI = (text) => {
   const textPara = document.createElement('p');
   textPara.setAttribute('contenteditable', 'true');
   textPara.setAttribute('class', 'para');
-  textPara.textContent = text.description;
+  textPara.textContent = description;
 
   const ellipse = document.createElement('i');
   ellipse.setAttribute('class', 'fa-solid fa-ellipsis-vertical');
