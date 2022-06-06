@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-No live demo yet
+[Live demo](https://wale-prog.github.io/To-do-List-Project/)
 
 ## Getting Started
 
