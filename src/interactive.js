@@ -1,4 +1,7 @@
 import { tasks } from './tasks.js';
+import singleTaskDefault from './createUI.js';
+import deleteTask from './deleteUI.js';
+import editTask from './editTask.js';
 
 export default function interactive() {
   const check = document.querySelectorAll('.check');
@@ -32,7 +35,11 @@ export default function interactive() {
       for (let i = 0; i < tasks.length; i += 1) {
         tasks[i].index = i + 1;
       }
-      return localStorage.setItem('tasks', JSON.stringify(tasks));
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+      taskSection.innerHTML = '';
+      singleTaskDefault();
+      deleteTask();
+      editTask();
     });
   });
 }

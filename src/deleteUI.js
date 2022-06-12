@@ -1,4 +1,6 @@
 import { tasks } from './tasks.js';
+import singleTaskDefault from './createUI.js';
+import editTask from './editTask.js';
 
 export default function deleteTask() {
   const taskDiv = document.querySelectorAll('.task-ui');
@@ -21,6 +23,10 @@ export default function deleteTask() {
       tasks = tasks.filter((task) => task.index !== index + 1);
       for (let i = 0; i < tasks.length; i += 1) tasks[i].index = i + 1;
       localStorage.setItem('tasks', JSON.stringify(tasks));
+      taskSection.innerHTML = '';
+      singleTaskDefault();
+      deleteTask();
+      editTask();
     });
   });
 }

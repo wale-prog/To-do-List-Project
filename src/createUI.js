@@ -1,5 +1,4 @@
 import { tasks } from './tasks.js';
-import interactive from './interactive.js';
 
 const createUI = ({ description }) => {
   const taskSection = document.querySelector('.tasks-section');
@@ -32,7 +31,6 @@ const createUI = ({ description }) => {
 const singleTaskDefault = () => {
   tasks.forEach((task) => {
     createUI(task);
-    interactive();
   });
 };
 export default singleTaskDefault;

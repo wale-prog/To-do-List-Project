@@ -7,7 +7,8 @@ export default function editTask() {
       if (event.key === 'Enter') {
         event.preventDefault();
         const nextTask = item.textContent;
-        tasks[index].description = nextTask;
+        const focusedArray = tasks.filter((task) => task.index === index + 1);
+        tasks[focusedArray[0].index - 1].description = nextTask;
         localStorage.setItem('tasks', JSON.stringify(tasks));
         item.parentElement.classList.remove('highlight');
         item.nextElementSibling.classList.remove('hidden');
