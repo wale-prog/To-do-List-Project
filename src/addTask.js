@@ -15,6 +15,7 @@ function addTaskDetails() {
     singleTaskDefault();
     deleteTask();
     editTask();
+
     textInput.value = '';
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
